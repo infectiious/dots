@@ -1,2 +1,1 @@
-# dots
-dots
+# A collection of my dotfiles.
