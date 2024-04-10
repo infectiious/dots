@@ -1,0 +1,91 @@
+{
+  "layer": "top",
+  "output": "DP-2",
+  "position": "top",
+  "spacing": 0,
+  "margin-top": 10,
+  "margin-left": 7,
+  "margin-right": 7,
+  "margin-bottom": -10,
+  "height": 44,
+  "modules-left": ["custom/logo", "hyprland/window"],
+  "modules-center": ["hyprland/workspaces"],
+  "modules-right":
+    ["tray", "backlight", "pulseaudio", "battery", "clock", "custom/power"],
+
+  "wlr/taskbar" : {
+    "format" : "{icon}",
+    "on-click" : "activate",
+    "on-click-right" : "fullscreen",
+
+    "icon-size" : 25,
+    "tooltip-format" : "{title}",
+  },
+
+  "hyprland/window" : {
+    "format" : "{title:60}",
+    "max-length" : 60,
+    "on-click" : "fullscreen",
+  },
+
+  "hyprland/workspaces" : {
+    "on-click" : "activate",
+    "format" : "{icon}",
+    "format-icons" : {
+      "default" : "",
+      "1" : "1",
+      "2" : "2",
+      "3" : "3",
+      "4" : "4",
+      "5" : "5",
+      "6" : "6",
+      "7" : "7",
+      "8" : "8",
+      "9" : "9",
+      "active" : "󱓻",
+      "urgent" : "󱓻",
+    },
+    "persistent-workspaces" : {
+      "1" : [ ],
+      "2" : [ ],
+      "3" : [ ],
+      "4" : [ ],
+      "5" : [ ],
+    },
+  },
+
+  "tray" : {
+    "spacing": 16
+  },
+
+  "clock" : {
+    "tooltip-format" : "  {:%a, %d %b %Y}",
+    "format" : "󰥔  {:%I:%M %p}",
+  },
+
+  "pulseaudio" : {
+    "format": "{icon}",
+    "format-bluetooth" : "󰂰",
+    "nospacing" : 1,
+    "tooltip-format" : "Volume : {volume}%",
+    "format-muted" : "󰝟",
+    "format-icons" : {
+      "headphone" : "",
+      "default" : [ "󰖀", "󰕾", "" ],
+    },
+    "on-click" : "pamixer -t",
+    "scroll-step" : 1,
+  },
+
+  "custom/logo" : {
+    "format" : "  ",
+    "tooltip" : false,
+    "on-click" : "wofi --show drun",
+  },
+
+  "custom/power" : {
+    "format" : "󰤆",
+    "tooltip" : false,
+    "on-click" : "wlogout",
+  }
+}

@@ -1,0 +1,51 @@
+* {
+    font-family: "SFMono Nerd Font";
+    outline-style: none;
+}
+
+window {
+    background-color: rgba(0, 0, 0, 0);
+}
+
+#input {
+    margin: 5px;
+    border-radius: 0px;
+    border: none;
+    border-bottom: 2px solid #ECECEC;
+    background-color: #101012;
+    color: #ECECEC;
+}
+
+#inner-box {
+    background-color: #101012;
+}
+
+#outer-box {
+    margin: 5px;
+    padding:20px;
+    background-color: #101012;
+    border-radius: 12px;
+}
+
+#scroll {
+}
+
+#text {
+  padding: 5px;
+  color: #ECECEC;
+}
+
+#entry:nth-child(even) {
+    background-color: #101012;
+}
+
+#entry:selected {
+    background-color: #101012;
+    color: #a158ff;;
+    border: none;
+}
+
+#text:selected {
+    color: #a158ff;
+    border: none;
+}
